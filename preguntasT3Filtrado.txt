@@ -1,0 +1,245 @@
+¿Firewall es lo mismo que filtrado de paquetes?
+a) Sí es lo mismo
+b) No es lo mismo 
+c) Sí es lo mismo solamente que el firewall es la base principal de seguridad
+b
+Indica cuál de estas afirmaciones es correcta
+a) El firewall es lo mismo que el filtrado de paquetes
+b) El firewall se contruye a partir del filtrado de paquetes
+c) Ninguna es correcta
+b
+Indica cuál de estas afirmaciones es correcta
+a) Un firewall establece las políticas de seguridad que luego son implementadas con sus funciones: filtrado de paquetes de red, registro de actividad, traducción de direcciones
+b) El firewall es lo mismo que el filtrado de paquetes y sus funciones son: filtrado de paquetes de red (IPTABLES), registro de actividad, traducción de direcciones
+c) Hay tres tipos de firewalls: en función del estado (stateless/stateful), en función de la capa(de red o aplicación) y en función de filtrado de paquetes(iptables)
+a
+La connection tracking (conntrack) solo sirve para...
+a) Sirve para todo tipo de protocolos incluso ICMP
+b) Protocolos orientados a conexión como TCP
+c) Para protocolos de la capa de transporte: TCP y UDP 
+a
+¿Qué es el connection tracking (conntrack)?
+a) Una componente del Kernel de Linux que sirve para ver el estado de la conexión si es TCP y se utiliza en el filtrado de paquetes
+b) Una componente del Kernel de Linux que sirve para ver el estado de la conexión si está establecida y coincide con un protocolo de transporte y se utiliza en el filtrado de paquetes
+c) Una componente del Kernel de Linux que sigue la pista de si un paquete pertenece o no a una conexión o está relacionado con otros paquetes
+c
+¿Qué función tiene IPTABLES?
+a) Filtrado de paquetes y Resgistro de actividad
+b) Única y exclusivamente filtrado de paquetes
+c) Filtrado de paquetes y traducción de direcciones
+b
+¿Qué partes forman una regla en IPTABLES?
+a) Patrón y acción
+b) Patrón, acción y número de la regla
+c) Protocolo, condiciones y número de la regla
+a
+¿Qué es el patrón de una regla en el filtrado de paquetes?
+a) Si se le aplica esa regla, el patrón es si se acepta o se rechaza el paquete
+b) El patrón nos indica solamente la red en la que se aplica la regla de filtrado
+c) Son las condiciones que deben darse en el paquete para aplicar las acciones de regla
+c
+¿Qué es la acción de una regla en el filtrado de paquetes?
+a) ACCEPT, REJECT, DROP
+b) El acción nos indica solamente la red en la que se aplica la regla de filtrado
+c) Son las condiciones que deben darse en el paquete para aplicar la regla
+a
+¿Cuándo se realiza la acción de la regla en el filtrado de paquetes?
+a) Si el patrón encaja con nuestro paquete
+b) Si estamos en la red correcta
+c) Cuando la regla es genérica siempre, si es particular tenemos que ver si encaja con nuestro patrón
+a
+¿Qué reglas se aplican primero?
+a) Las reglas genéricas
+b) Las reglas particulares
+c) No importa el orden
+b
+¿Cómo se estructuran un conjunto de reglas?
+a) Ficheros especiales
+b) En un fichero específico dentro del Kernel de Linux
+c) Tablas
+c
+Imaginemos que tenemos una tabla de reglas, su tuvieramos tres y ninguna se aplica, ¿Qué pasaría?
+a) Se aplica la acción por defecto
+b) No se aplica ninguna regla
+c) Pasaríamos a la siguiente tabla
+a
+Listas de reglas que se aplican en orden a los paquetes en un punto determinado de su procesamiento ¿Cómo se llaman?
+a) Conjunto de reglas
+b) Cadenas
+c) Tablas
+b
+Conjunto de cadenas destinados a diferentes tipos de procesamiento, ¿Qué son?
+a) Tablas
+b) Cadenas
+c) Conjunto de reglas
+a
+Indica qué afirmación es correcta
+a) Una regla puede mover un paquete a otra cadena
+b) Todo paquete de entrada/salida del sistema atraviesa al menos dos cadenas
+c) Si un paquete no encaja en ninguna de las reglas, no se aplica la política de la cadena
+a
+Indica qué afirmación es falsa
+a) Una regla puede mover un paquete a otra cadena
+b) Todo paquete de entrada/salida del sistema atraviesa al menos una cadena
+c) Si un paquete no encaja en ninguna de las reglas, no se aplica la política de la cadena
+c
+Indica qué afirmación es correcta
+a) Una regla no puede mover un paquete a otra cadena
+b) Todo paquete de entrada/salida del sistema atraviesa al menos una cadena
+c) Si un paquete no encaja en ninguna de las reglas, no se aplica la política de la cadena
+b
+Indica qué afirmación es correcta
+a) Una regla no puede mover un paquete a otra cadena
+b) Todo paquete de entrada/salida del sistema atraviesa al menos dos cadenas
+c) Si un paquete no encaja en ninguna de las reglas, se aplica la política de la cadena
+c
+¿Cuál es la tabla que bloquea o permite el tránsito de un paquete?
+a) Tabla Mangle
+b) Tabla NAT
+c) Tabla Filter
+c
+¿Cuál es la tabla que reescribe las direcciones origen o destino y puertos de un paquete?
+a) Tabla Filter
+b) Tabla NAT
+c) Tabla Mangle
+b
+¿Cuál es la tabla que todo paquete del sistema atraviesa?
+a) Tabla Filter
+b) Tabla NAT
+c) Tabla Mangle
+a
+¿Cuál es la tabla que sirve para cambiar algunos campos del paquete?
+a) Tabla Filter
+b) Tabla NAT
+c) Tabla Mangle
+c
+¿Cuál es la tabla que altera la cabecera del tráfico (MTUs, MSS o TOS) y que tiene todas las cadenas?
+a) Tabla Filter
+b) Tabla NAT
+c) Tabla Mangle
+c
+¿A qué tabla pertenecen las cadenas INPUT, OUTPUT Y FORWARD?
+a) Tabla Filter
+b) Tabla NAT
+c) Tabla Mangle
+a
+¿A qué tabla pertenecen las cadenas PREROUTING, POSTROUTING Y OUTPUT?
+a) Tabla Filter
+b) Tabla NAT
+c) Tabla Mangle
+b
+¿A qué cadena pertenecen los paquetes destinados al sistema?
+a) FORWARD
+b) OUTPUT
+c) INPUT
+c
+¿A qué cadena pertenecen los paquetes generados en el sistema?
+a) FORWARD
+b) OUTPUT
+c) INPUT
+b
+¿A qué cadena pertenecen los paquetes que atraviesan el sistema (encaminados)?
+a) FORWARD
+b) OUTPUT
+c) INPUT
+a
+¿A qué cadena pertenecen los paquetes de entrada antes de la decisión de encaminamiento?
+a) PREROUTING
+b) POSTROUTING
+c) OUTPUT
+a
+¿A qué cadena pertenecen los paquetes de salida después de la decisión de encaminamiento?
+a) PREROUTING
+b) POSTROUTING
+c) OUTPUT
+b
+¿A qué cadena pertenecen los paquetes de salida generados localmente?
+a) PREROUTING
+b) POSTROUTING
+c) OUTPUT
+c
+¿Qué cadena se usa en DNAT?
+a) PREROUTING
+b) POSTROUTING
+c) OUTPUT
+a
+¿Qué cadena se usa en SNAT?
+a) PREROUTING
+b) POSTROUTING
+c) OUTPUT
+b
+¿Qué pasa en mi ordenador cuando llega un paquete?
+a) Pasa por la regla INPUT
+b) Pasa por la regla PREROUTING
+c) Pasa por la regla FORWARD
+b
+Indica cuales son los objetivos de las reglas
+a) INPUT, OUTPUT, FORWARD
+b) ACCEPT, REJECT, DROP, LOG
+c) ACCEPT, REJECT, DROP
+b
+¿Qué objetivo es igual que DROP pero envía un ICMP de un tipo que puede definirse?
+a) LOG
+b) REJECT
+c) Ninguno
+b
+¿Qué parámetro sirve para establecer la política por defecto para cadenas INPUT, OUTPUT y FORWARD?
+a) -P
+b) -A
+c) -S
+a
+¿Cuáles son la definición de reglas según el estado de la conexión?
+a) NEW, ESTABLISHED, RELATED, INVALID, CLOSED
+b) NEW, ESTABLISHED, RELATED, FIN
+c) NEW, ESTABLISHED, RELATED, INVALID
+c
+¿En qué consiste en NAT la traducción estática?
+a) Asignación de N dirrecciones privadas a N direcciones públicas
+b) Asignación de N direcciones privadas a 1 dirección pública
+c) Asignación de N dirrecciones privadas a M direcciones públicas siendo (M < N)
+a
+¿En qué consiste en NAT la traducción estática?
+a) Asignación de N dirrecciones privadas a N direcciones públicas
+b) Asignación fija
+c) Ambas
+c
+¿En qué consiste en NAT la traducción Dinámica?
+a) Asignación de N dirrecciones privadas a M direcciones públicas siendo (M < N)
+b) Asignación dinámica, sólo pueden acceder a Internet M máquinas a la vez
+c) Ambas
+c
+¿En qué consiste en NAT la traducción Dinámica?
+a) Asignación de N dirrecciones privadas a M direcciones públicas siendo (M < N)
+b) Asignación dinámica, sólo pueden acceder a Internet N máquinas a la vez
+c) Asignación de N dirrecciones privadas a N direcciones públicas
+a
+¿En qué consiste en NAT la traducción Dinámica?
+a) Asignación de N dirrecciones privadas a M direcciones públicas siendo (M <= N)
+b) Asignación dinámica, sólo pueden acceder a Internet M máquinas a la vez
+c) Asignación de N dirrecciones privadas a M direcciones públicas siendo (M > N)
+b
+¿En qué consiste en NAT la traducción Dinámica?
+a) Asignación de N dirrecciones privadas a M direcciones públicas siendo (M < N)
+b) Asignación dinámica, sólo pueden acceder a Internet N máquinas a la vez
+c) Asignación de N dirrecciones privadas a M direcciones públicas siendo (M > N)
+a
+¿En qué consiste en NAT el NAPT - Masquerading?
+a) Asignación de N direcciones privadas a 1 dirección pública
+b) Asignación de N direcciones públicas a 1 dirección privada
+c) Asignación de N direcciones privadas a M direcciones públicas
+a
+¿Cuál es el propósito del objetivo MASQUERADE en una regla de iptables?
+a) Realizar DNAT con direcciones públicas dinámicas
+b) Realizar SNAT con direcciones públicas dinámicas
+c) Realizar SNAT con direcciones públicas estáticas
+b
+¿En qué consiste en NAT el Port Forwarding - Virtual Servers?
+a) Asignación de N direcciones privadas a 1 dirección pública
+b) Asignación de 1 dirección pública a N direcciones privadas
+c) Asignación de N direcciones privadas a M direcciones públicas
+b
+¿Qué cadenas se usan para NAT el Port Forwarding - Virtual Servers?
+a) DNAT por lo que PREROUTING y también OUTPUT
+b) SNAT por lo que POSTROUTING y también OUTPUT
+c) DNAT por lo que POSTROUTING y también OUTPUT
+a
